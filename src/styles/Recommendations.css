@@ -1,0 +1,237 @@
+/* ---------- PRODUCT CARD ----------- */
+
+/* ----------------- PRODUCTS SECTION ----------------- */
+.products-section {
+  margin-top: 16px;
+}
+
+.products-section h3 {
+  margin-bottom: 8px;
+}
+
+/* Horizontal scroll list */
+.products-list {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+/* Hide default scrollbar but allow scrolling */
+.products-list::-webkit-scrollbar {
+  height: 6px;
+}
+
+.products-list::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05);
+}
+
+.products-list::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+
+/* ---------- PRODUCT CARD ----------- */
+.product-card {
+  min-width: 15vw;          /* wider */
+  max-width: 15vw;
+  height: auto;             /* height adjusts automatically */
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.2s ease;
+  background: transparent;   /* no background */
+  box-shadow: none;          /* remove shadow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card-image {
+  width: 100%;
+  aspect-ratio: 1/1;       /* square image */
+  overflow: hidden;
+}
+
+.product-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Title below the image */
+.product-card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-top: 6px;
+  text-align: center;
+}
+
+
+/* Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+/* Wrapper */
+.recommendations-wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #f1f5f9;
+  overflow: hidden; /* prevent scrolling for whole page */
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  z-index: 0;
+}
+
+/* Header */
+.dashboard-header {
+  position: relative;
+  z-index: 1;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between; /* pushes button to the right */
+  align-items: center;
+}
+
+.dashboard-header h1 {
+  font-size: 1.8rem;
+  margin: 0 0 4px 0;
+}
+
+.dashboard-header p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+/* Main container */
+.dashboard-main {
+  display: flex;
+  gap: 12px;
+  padding: 12px 24px;
+  position: relative;
+  z-index: 1;
+  height: calc(100vh - 56px); /* header smaller height */
+}
+
+/* Left minimized exercises */
+.exercise-list {
+  flex: 0 0 25vw; /* width */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  height: 75vh; /* fixed height */
+  overflow-y: auto; /* allow scrolling */
+  padding-bottom: 12px; /* ensure last card fully visible */
+  box-sizing: border-box;
+}
+
+/* Customize scrollbar */
+.exercise-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.exercise-list::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.05);
+}
+
+.exercise-list::-webkit-scrollbar-thumb {
+  background: rgba(200,200,200,0.5);
+  border-radius: 3px;
+}
+
+/* Exercise card */
+.exercise-card {
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #475569;
+  background: rgba(30, 41, 59, 0.6);
+  height: 18vh; /* maintain same height relative to viewport */
+  transition: transform 0.2s;
+}
+
+.exercise-card:hover {
+  transform: translateY(-3px);
+}
+
+.exercise-card-image {
+  position: relative;
+  height: 100%;
+}
+
+.exercise-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.exercise-card .overlay {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  color: #f1f5f9;
+  text-shadow: 0 0 5px black;
+  font-size: 0.9rem;
+}
+
+/* Right details panel */
+aside {
+  flex: 1; /* take remaining width */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.exercise-details {
+  width: 100%;
+  max-width: 60vw;
+  height: 75vh; /* match left panel */
+  padding: 16px;
+  border-radius: 16px;
+  background-color: rgba(30, 41, 59, 0.7);
+  border: 1px solid #475569;
+  overflow-y: auto; /* enable scrolling if content exceeds 75vh */
+  box-sizing: border-box;
+}
+.exercise-details::-webkit-scrollbar {
+  width: 6px;
+}
+
+.exercise-details::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.05);
+}
+
+.exercise-details::-webkit-scrollbar-thumb {
+  background: rgba(200,200,200,0.5);
+  border-radius: 3px;
+}
+.exercise-details img {
+  width: 100%;
+  height: 35vh; /* bigger image */
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.exercise-details p {
+  font-size: 0.95rem;
+}
