@@ -1,6 +1,6 @@
 # CTO de Votre Santé Posturale
 
-Une application web développée avec **React** et **Vite** pour analyser et améliorer la posture des utilisateurs à travers des vidéos.
+Une application web développée avec **React** et **Vite** pour analyser et améliorer la posture des utilisateurs.
 
 ---
 
